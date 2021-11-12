@@ -73,7 +73,7 @@ public class PrimeNumber
             changeFilePermissions(false, false);
         } catch(IOException e) {
           if(contains(2) == false) {
-              prime_numbers.add(2); //
+              prime_numbers.add(2);
           }
           if(contains(3) == false) {
               prime_numbers.add(3);
@@ -82,7 +82,7 @@ public class PrimeNumber
        } catch (NumberFormatException e) {
             System.out.println("Number formatting exception was caught. Prime list file was not rendered. Program will be less performant.");
             if(contains(2) == false) { 
-                //if list doesn't contain basic primes add them!
+                //if list doesn't contain basic primes add them
                 if(prime_numbers.size() > 0){
                     prime_numbers.clear();
                 }
@@ -97,7 +97,7 @@ public class PrimeNumber
         }
       getPositiveIntInput("Enter an integer n to find the nth prime:");
       
-      ZonedDateTime start = ZonedDateTime.now(); //start the stopwatch
+      ZonedDateTime start = ZonedDateTime.now(); //start stopwatch
       int q = 0;
       boolean notPrime = false;
       int i = prime_numbers.get(prime_numbers.size()-1)+2; //i is the prime to be tested
@@ -105,7 +105,6 @@ public class PrimeNumber
           nthprime = Integer.toString(prime_numbers.get(n-1)); //if the prime is already in the prime list, then just print it
       } catch (IndexOutOfBoundsException j) {
         while(prime_numbers.size() < n){
-         q = 0;
          while(prime_numbers.get(q) <=  Math.sqrt(i)){
             //if remainder of i divided by the qth prime found is 0, i is not prime
             if ((i%prime_numbers.get(q))==0){ 
