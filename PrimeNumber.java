@@ -34,7 +34,7 @@ public class PrimeNumber
     Scanner sc = new Scanner(System.in); //the input scanner
     int n; //user value for nth prime
     String nthprime; //the nth prime
-    final static String filePath = "./primelist.txt"; //prime list file path 
+    final static String filePath = "./primelist.txt"; //prime list file path (you need to change this, depending on your prime list file!)
     ArrayList<Integer> prime_numbers = new ArrayList<Integer>(); //list of prime numbers
     /**
      * Constructor for objects of class PrimeNumber
@@ -215,7 +215,7 @@ public class PrimeNumber
         } catch (FileNotFoundException ex) {
             System.err.format("The file %s does not exist", filePath + ". The text file was not zipped.") ; //no file exists
         } catch (IOException ex) {
-            System.err.println("I/O error when zipping text file. Prime list file no longer was zipped."); //io exception, nothing happens
+            System.err.println("I/O error when zipping text file. Prime list file no longer was zipped."); //io exception, nothing happens, program no longer zipped
         }
     }
 }
